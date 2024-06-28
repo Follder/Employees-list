@@ -1,8 +1,11 @@
+@import '../../utils/colors.scss';
+@import '../../utils/variables.scss';
+
 .app-info {
   margin-top: 50px;
   padding: 25px;
-  background-color: #3d5a80;
+  background-color: $main-color;
   border-radius: 4px;
-  box-shadow: 15px 15px 30px rgba(0,0,0, .15);
-  color: #fff;
+  box-shadow: $box-shadow;
+  color: $white;
 }

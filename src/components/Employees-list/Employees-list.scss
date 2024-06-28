@@ -1,0 +1,10 @@
+@import '../../utils/colors.scss';
+@import '../../utils/variables.scss';
+
+.app-list {
+  margin-top: 30px;
+  background-color: $main-color;
+  border-radius: 4px;
+  box-shadow: $box-shadow;
+  color: $white;
+}
