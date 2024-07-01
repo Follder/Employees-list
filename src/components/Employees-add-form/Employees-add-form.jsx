@@ -18,14 +18,25 @@ export class EmployeesAddForm extends Component {
     this.setState({salary: e.target.value})
   }
 
+  createNewEmpl = (e) => {
+    e.preventDefault();
+
+    if (this.state.name.trim().length > 0 && !isNaN(+this.state.salary) && +this.state.salary > 0) {
+      const newItem = {name: this.state.name, salary: +this.state.salary}
+
+      this.setState({name: '', salary: ''})
+
+      return this.props.onAdd(newItem);
+    }
+  }
+
   render() {
     const {name, salary} = this.state;
-    window.console.log(name, salary);
 
     return (
       <div className="app-add-form">
         <h3>Додати нового працівника</h3>
-        <form action="" className="add-form d-flex">
+        <form action="" className="add-form d-flex" onSubmit={this.createNewEmpl}>
           <input
             type="text"
             className="form-control new_post-label"
